@@ -1,0 +1,93 @@
+{% extends 'layout.html' %} {% block title %} Search Results {% endblock %} {%
+block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results</title>
+    <style>
+      a {
+        font-size: 25px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    {% if search_text is defined and search_text.strip() %}
+    <div class="search-box">
+      {% if search_results %}
+      <div class="s">
+        <h1>Showing Results for "{{ search_text }}"</h1>
+        <b>
+          <span class="result">
+            <span class="res">{{ search_results|length }}</span>
+            results found
+          </span>
+        </b>
+      </div>
+
+      {% for result in search_results %}
+      <div class="result-box">
+        <div class="title">
+          <a href="{{ url_for('view_item', item_id=result['id']) }}">
+            {% set title_words = result['separa'].split() %} {% for word in
+            title_words %} {% set lowercase_word = word|lower %} {% set
+            lowercase_search_text = search_text|lower %} {% set match_index =
+            lowercase_word.find(lowercase_search_text) %} {% if match_index >= 0
+            %} {% set prefix = word[:match_index] %} {% set matched_text =
+            word[match_index:match_index + search_text|length] %} {% set suffix
+            = word[match_index + search_text|length:] %} {{ prefix }}<span
+              class="highlight"
+              >{{ matched_text }}</span
+            >{{ suffix }}{% if not loop.last %} {% endif %} {% else %} {{ word
+            }}{% if not loop.last %} {% endif %} {% endif %} {% endfor %}
+          </a>
+        </div>
+        {% if result['surahs'] is defined %}
+        <div class="surahs">
+          {% set surah_found = false %} {% for surah in result['surahs'] %} {%
+          set lowercase_surah = surah.lower() %} {% set lowercase_search_text =
+          search_text.lower() %} {% set match_index =
+          lowercase_surah.find(lowercase_search_text) %} {% if match_index >= 0
+          %} {% set prefix = surah[:match_index] %} {% set matched_text =
+          surah[match_index:match_index + search_text|length] %} {% set suffix =
+          surah[match_index + search_text|length:] %}
+          <p>
+            Surah: {{ prefix }}<span class="highlight">{{ matched_text }}</span
+            >{{ suffix }}
+          </p>
+          {% set surah_found = true %} {% endif %} {% endfor %}
+        </div>
+        {% endif %} {% if result['summary'] is defined %}
+        <div class="summary">
+          {% set sentences = result['summary'].split('.') %} {% for sentence in
+          sentences %} {% if search_text.lower() in sentence.lower() %} {% set
+          lowercase_sentence = sentence.lower() %} {% set lowercase_search_text
+          = search_text.lower() %} {% set match_index =
+          lowercase_sentence.find(lowercase_search_text) %} {% if match_index >=
+          0 %} {% set prefix = sentence[:match_index] %} {% set matched_text =
+          sentence[match_index:match_index + search_text|length] %} {% set
+          suffix = sentence[match_index + search_text|length:] %} {% if
+          prefix.strip() %} {{ prefix }}<span class="highlight"
+            >{{ matched_text }}</span
+          >{{ suffix }}. {% else %}
+          <span class="highlight">{{ matched_text }}</span>{{ suffix }}. {%
+          endif %} {% endif %} {% endif %} {% endfor %}
+        </div>
+        {% endif %}
+        <div class="spaceS"></div>
+      </div>
+      {% endfor %} {% else %}
+      <div class="s">
+        <h1>Showing Results for "{{ search_text }}"</h1>
+
+        <h5><b> No </b>results found.</h5>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </body>
+</html>
+
+{% endblock %}

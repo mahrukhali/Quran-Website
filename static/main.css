@@ -1,0 +1,363 @@
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+#navbar {
+  background-color: rgb(193, 13, 157);
+
+  color: #fff;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 2px;
+  padding-left: 5px;
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+#navbar a {
+  font-size: 15px; /* Increase font size of the Quran link */
+  text-decoration: none; /* Remove underline */
+  color: rgb(255, 255, 255); /* Preserve the text color */
+}
+#navbar a:hover {
+  background-color: #eba4eb; /* Change background color on hover */
+}
+.first {
+  background-color: gray;
+  margin-left: -300px;
+  padding-left: 200px;
+}
+.pinkPic {
+  width: 690px;
+  height: 600px;
+  padding-left: 100px;
+  /* padding-right: -100px; */
+  /* margin-right: 10px; */
+}
+.text {
+  padding-right: -200px;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  color: black;
+}
+/* Add padding to popular items */
+.popular-item {
+  padding-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background-color: lightgray;
+  width: 300px;
+  height: 140px;
+}
+.custom-container {
+  max-width: 4000px !important; /* Adjust the width as needed */
+  margin: 0 auto !important; /* Center the container */
+  background-color: rgb(255, 255, 178);
+}
+.p {
+  padding-top: 60px;
+  padding-left: 150px;
+}
+.g {
+  padding-top: 20px;
+  padding-left: 50px;
+  margin-left: 100px;
+}
+.fos {
+  font-size: 22px;
+  /* padding-left: -50px; */
+  font-weight: bold;
+  padding-top: 50px;
+}
+.f {
+  font-size: 50px;
+  /* text-align: center; */
+}
+.sum {
+  padding-left: 10px;
+  /* padding-right: 10px; */
+  color: #333333; /* Dark grey */
+  display: inline-block;
+
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  padding-right: 200;
+  /* margin-right: 500px; */
+  width: 590px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a box shadow */
+  background-color: #fefeb6;
+}
+/* Make summary text wrap to multiple lines */
+.popular-item p {
+  white-space: normal;
+  font-size: 12px;
+}
+.explore {
+  background-color: gray;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 40px;
+  background-color: pink;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.c {
+  margin-left: -500px;
+}
+#search-form {
+  display: flex;
+}
+
+#search-input {
+  border: none;
+  border-radius: 5px; /* Adjust border radius for rounded corners */
+  font-size: 15px; /* Increase font size */
+  width: 600px; /* Set the width of the search input */
+  height: 40px;
+}
+.sp {
+  margin-bottom: 5px;
+  /* font-weight: bold; */
+  color: rgb(58, 58, 58);
+}
+
+#search-form button {
+  /* padding: 10px 10px; */
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  width: 70px;
+}
+.res {
+  color: blue;
+}
+.results {
+  font-size: 20px;
+  font-weight: bold;
+}
+#search-form button:hover {
+  background-color: #777;
+}
+.m {
+  padding-left: 450px;
+}
+.s {
+  padding-bottom: 5px;
+}
+.siz {
+  font-size: 15px;
+}
+.form-group {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.form-group label {
+  display: block;
+}
+.smaller-image {
+  padding-top: 25px;
+  max-width: 45px;
+  mix-blend-mode: multiply;
+}
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  font-size: 15px;
+}
+
+.card .card-title {
+  font-size: inherit !important;
+}
+.btn-primary {
+  background-color: rgb(193, 13, 157);
+  border-color: rgb(193, 13, 157);
+}
+
+.btn-primary:hover {
+  background-color: rgb(193, 13, 157);
+  border-color: rgb(193, 13, 157);
+}
+.mo {
+  padding-left: 450px;
+  background-color: #f5f5f5;
+  padding-top: 5px;
+}
+label {
+  font-size: 20px;
+}
+.view {
+  padding-left: 400px;
+  padding-bottom: 30px;
+  background-color: #f5f5f5;
+}
+.readI {
+  width: 50px;
+  height: 50px;
+}
+.parai {
+  width: 400px;
+  height: 300px;
+}
+.summary-box {
+  border: white;
+  width: 60;
+  margin-bottom: 5px;
+}
+.edit-button {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: rgb(193, 13, 157);
+  color: #fff;
+  border: 1px solid rgb(193, 13, 157);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.edit-button:hover {
+  background-color: rgb(193, 13, 157);
+  border-color: rgb(193, 13, 157);
+}
+.total-ayahs {
+  color: gray;
+}
+.d-flex {
+  display: flex;
+  margin-top: 25px;
+}
+
+.verses,
+.surahs {
+  width: 48%;
+  margin-right: -10%;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: green;
+  color: #fff;
+  border: 1px solid green;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 500px;
+  background-color: white;
+}
+.boxs {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 500px;
+  height: 790px;
+  background-color: white;
+}
+.boxes {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 700px;
+  height: 750px;
+  background-color: white;
+}
+.search-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+}
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+.co1 {
+  margin-right: -150px;
+  margin-left: 80px;
+}
+.co2 {
+  margin-left: 30px;
+}
+.container-fluid {
+  background-color: #f5f5f5;
+}
+.imal {
+  margin-right: -10px;
+}
+.card-text {
+  margin-bottom: 5px;
+}
+.title {
+  font-size: 25px;
+  color: black;
+}
+.justify-content-center {
+  padding-left: 100px;
+  justify-content: center !important;
+}
+.surahs-container {
+  margin-left: 150px;
+}
+#submit-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+#discard-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.result-box {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+.result-box:hover {
+  background-color: rgb(219, 220, 220);
+}
+.title {
+  transition: background-color 0.3s, cursor 0.3s;
+  position: relative;
+  display: inline-block;
+}
+.title:hover {
+  background-color: rgb(226, 226, 226);
+  cursor: pointer;
+}
+.error-message {
+  color: red;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}

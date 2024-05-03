@@ -1,0 +1,70 @@
+{% extends 'layout.html' %} {% block title %} Edit Item {% endblock %} {% block
+content %}
+<div class="container-fluid">
+  <div class="mo">
+    <div class="boxs">
+      <h1>Edit Item</h1>
+      <form method="post">
+        <div class="sp">
+          <label for="img">Image:</label>
+          <br />
+          <input type="text" id="img" name="img" value="{{ item.img }}" />
+        </div>
+        <div class="sp">
+          <label for="separa">Separa:</label>
+          <br />
+          <input
+            type="text"
+            id="separa"
+            name="separa"
+            value="{{ item.separa }}"
+          />
+          <br />
+        </div>
+        <div class="sp">
+          <label for="ayahs">Ayahs:</label>
+          <br />
+          <input type="text" id="ayahs" name="ayahs" value="{{ item.ayahs }}" />
+        </div>
+        <div class="sp">
+          <label for="surahs">Surahs:</label>
+          <br />
+          <input
+            type="text"
+            id="surahs"
+            name="surahs"
+            value="{{ item.surahs }}"
+          />
+        </div>
+        <br />
+        <div class="sp">
+          <label for="verses">Verses:</label>
+          <br />
+          <input
+            type="text"
+            id="verses"
+            name="verses"
+            value="{{ item.verses }}"
+          />
+        </div>
+        <br />
+        <div class="sp">
+          <label for="video">Video:</label>
+          <br />
+          <input type="text" id="video" name="video" value="{{ item.video }}" />
+        </div>
+        <br />
+        <div class="sp">
+          <label for="summary">Summary:</label>
+          <br />
+          <textarea id="summary" name="summary">{{ item.summary }}</textarea>
+        </div>
+        <br />
+        <button type="submit" id="submit-btn">Submit</button>
+        <button type="button" id="discard-btn">Discard Changes</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

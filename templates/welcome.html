@@ -1,0 +1,70 @@
+{% extends 'layout.html' %} {% block title %} Welcome {% endblock %} {% block
+content %}
+
+<div class="container-fluid">
+
+  <div class="row explore">
+    <div class="col-md-12">
+      <div>Learn and Explore the Holy Quran</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 co1">
+      <img
+        class="pinkPic"
+        src="https://m.media-amazon.com/images/I/61eF5SbTl6L._AC_UF1000,1000_QL80_.jpg"
+        alt="Pink Quran Image"
+      />
+      <div class="sum-box">
+      
+        <div class="sum">
+          The Qur'an contains prayers, moral guidance, historical narrative, and
+          promises of Paradise. It opens with a short prayer called the Fatiha,
+          the most widely recited passage, and is divided into 114 chapters
+          (suras) organized in descending length. Learn and read more about each
+          chapter here!
+        </div>
+        </div>
+    </div>
+    
+
+    <div class="col-md-4 co2">
+      <div class="fos">Shortest chapters:</div>
+      <div id="popular-items-container" class="col-md-4">
+        {% for item in popular_items %}
+        <div>
+          <div class="card">
+            <div class="card-body">
+              <p>{{ item['separa'] }}</p>
+
+              <img
+                class="img-fluid mx-auto"
+                src="{{ item['img'] }}"
+                alt="Circle Image of {{ item['separa'] }}"
+              />
+              <p class="card-text">{{ item['summary'] }}</p>
+              <a
+                href="{{ url_for('view_item', item_id=item['id']) }}"
+                class="btn btn-primary"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+        {% endfor %} 
+    </div>
+  </div>
+</div>
+
+
+      <style>
+        .container {
+          width: 2000px; 
+          background-color: #f5f5f5; 
+        }
+      </style>
+
+      {% endblock %}
+    </div>
+  </div>
+</div>
